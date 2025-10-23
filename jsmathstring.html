@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS MATH AND STRING FUNCTIONS</title>
+</head>
+<body>
+    <div id="maths">
+       <h1 style="text-align: center;">JAVA SCRIPT MATH FUNCTIONS</h1> 
+       <b>Enter a number:</b><input type="text" id="number"><br><br>
+       <button onclick="power();">POWER</button>
+       <button onclick="squareroot();">SQUAREROOT</button>
+       <button onclick="absolute();">ABSOLUTE</button>
+       <button onclick="ceiling();">CEIL</button>
+       <button onclick="flooring();">FLOOR</button>
+       <button onclick="rounding();">ROUND</button>
+       <button onclick="maxNumber();">MAX</button>
+       <button onclick="minNumber();">MIN</button>
+       <button onclick="randomNumber();">RANDOM</button>
+       <button onclick="truncNumber();">TRUNC</button>
+       
+
+       <b>RESULT :</b> <input type="text" id="output" readonly><br>
+      <script>
+        function power(){
+            let y=prompt('Enter the power');
+            let x=parseFloat(document.getElementById('number').value);
+            document.getElementById('output').value=Math.pow(x,y);
+        }
+        function squareroot(){
+            let x=parseFloat(document.getElementById('number').value);
+            document.getElementById('output').value=Math.sqrt(x);
+        }
+        function absolute(){
+            let x=parseFloat(document.getElementById('number').value);
+            document.getElementById('output').value=Math.abs(x);
+        }
+        function ceiling(){
+            let x=parseFloat(document.getElementById('number').value);
+            document.getElementById('output').value=Math.ceil(x);
+        }
+        function flooring(){
+            let x=parseFloat(document.getElementById('number').value);
+            document.getElementById('output').value=Math.floor(x);
+        }
+        function rounding(){
+            let x=parseFloat(document.getElementById('number').value);
+            document.getElementById('output').value=Math.round(x);
+        }
+        function maxNumber(){
+            let nums = prompt("Enter numbers separated by commas:");
+            let arr = nums.split(",").map(Number);
+            document.getElementById('output').value = Math.max(...arr);
+        }
+        function minNumber(){
+            let nums = prompt("Enter numbers separated by commas:");
+            let arr = nums.split(",").map(Number);
+            document.getElementById('output').value = Math.min(...arr);
+        }
+        function randomNumber(){
+            document.getElementById('output').value = Math.random();
+        }
+        function truncNumber(){
+            let x=parseFloat(document.getElementById('number').value);
+            document.getElementById('output').value = Math.trunc(x);
+        }
+      </script>
+    </div>
+
+  <div id="string">
+  <h1 style="text-align: center;">JAVA SCRIPT STRING FUNCTIONS</h1>
+  
+  <b>Enter a string:</b>
+  <input type="text" id="wrd"><br><br>
+  
+  <button onclick="getLength();">LENGTH</button>
+  <button onclick="getSubstring();">SUBSTRING</button>
+  <button onclick="searchString();">SEARCH</button>
+  <button onclick="getPosition();">POSITION</button>
+  <button onclick="toUpper();">UPPERCASE</button>
+  <button onclick="toLower();">LOWERCASE</button>
+  <button onclick="getCharAt();">CHAR AT</button>
+  <button onclick="replaceText();">REPLACE</button>
+  
+  <br><br>
+  <b>RESULT :</b> 
+  <input type="text" id="stringoutput" readonly><br><br>
+
+  <script>
+    function getLength(){
+      let x = document.getElementById('wrd').value;
+      document.getElementById('stringoutput').value = x.length;
+    }
+    function getSubstring(){
+      let x = document.getElementById('wrd').value;
+      let start = parseInt(prompt("Enter start index (0-based):"));
+      let end = parseInt(prompt("Enter end index:"));
+      document.getElementById('stringoutput').value = x.substring(start, end);
+    }
+    function searchString(){
+      let x = document.getElementById('wrd').value;
+      let term = prompt("Enter text to search:");
+      document.getElementById('stringoutput').value = x.search(term);
+    }
+    function getPosition(){
+      let x = document.getElementById('wrd').value;
+      let term = prompt("Enter text to find position:");
+      document.getElementById('stringoutput').value = x.indexOf(term);
+    }
+    function toUpper(){
+      let x = document.getElementById('wrd').value;
+      document.getElementById('stringoutput').value = x.toUpperCase();
+    }
+    function toLower(){
+      let x = document.getElementById('wrd').value;
+      document.getElementById('stringoutput').value = x.toLowerCase();
+    }
+    function getCharAt(){
+      let x = document.getElementById('wrd').value;
+      let index = parseInt(prompt("Enter index:"));
+      document.getElementById('stringoutput').value = x.charAt(index);
+    }
+    function replaceText(){
+      let x = document.getElementById('wrd').value;
+      let find = prompt("Enter text to replace:");
+      let replace = prompt("Enter replacement text:");
+      document.getElementById('stringoutput').value = x.replace(find, replace);
+    }
+  </script>
+</div>
+</body>
+</html>

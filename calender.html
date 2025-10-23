@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="align-items: center;">
+    <p id="xyz"></p>
+    <script>
+        let x=prompt('Enter the year')
+        let y=prompt("Enter the month")
+        var d = "<table border='1'><tr><th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th><th>SUN</th></tr><tr>";
+        var c = new Date(x,y);
+        var day = c.getDay();
+        for(var i=0;i<day;i++)
+        {
+            d+="<td></td>";
+        }
+        while(c.getMonth()==y)
+        {
+            d+="<td>"+c.getDate()+"</td>";
+            if(c.getDay()%7==6)
+            {
+                d+="</tr><tr>";
+            }
+            c.setDate(c.getDate()+1);
+        }
+        t="</table>"
+        d+=t;
+        document.getElementById("xyz").innerHTML=d;
+    </script>
+    </div>
+</body>
+</html>

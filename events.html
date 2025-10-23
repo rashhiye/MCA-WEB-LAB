@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1NIu8E.img?w=768&h=512&m=6&x=473&y=204&s=105&d=105" id="img" alt="">
+    <script>
+        function themouseOver() {
+           const img = document.getElementById('img');
+           img.src='https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1NNFek.img?w=768&h=432&m=6&x=202&y=0&s=674&d=158'
+        }
+          function themouseOut() {
+           const img = document.getElementById('img');
+           img.src='https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1NIu8E.img?w=768&h=512&m=6&x=473&y=204&s=105&d=105'
+        }
+        document.getElementById("img").addEventListener("mouseover", themouseOver);
+        document.getElementById("img").addEventListener("mouseout", themouseOut);
+    </script>
+   </script>
+</body>
+</html>

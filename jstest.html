@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="heading">CHANGE COLOUR</h3>
+    <button onclick="color('red')">red</button>
+    <button onclick="color('blue')">blue</button>
+    <button onclick="color('green')">green</button>
+    <button onclick=change()>CHANGE NAME</button>
+
+    <script>
+        function color(c){
+            document.getElementById('heading').style.color = c
+        }
+        function change(){
+        let x=prompt("Enter your name")
+        document.getElementById('heading').innerText= x
+        }
+    </script>
+</body>
+</html>
